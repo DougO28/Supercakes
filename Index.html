@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperCakes - Pasteles Artesanales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">SuperCakes</a>
+            <nav>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Sección Hero -->
+        <section class="hero fade-in-up" id="inicio">
+            <div class="hero-content">
+                <h1>Pasteles Super Cakes </h1>
+                <p>Endulza tus momentos especiales con nuestras creaciones únicas</p>
+                <a href="#productos" class="cta-button">Ver Productos</a>
+            </div>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section class="productos" id="productos">
+            <h2 class="section-title">Nuestros Pasteles</h2>
+            <div class="productos-grid">
+                <div class="producto-card" onclick="mostrarDetalle('Pastel de Chocolate')">
+                    <div class="producto-image">🍰🥰</div>
+                    <div class="producto-info">
+                        <h3>Pastel de Chocolate</h3>
+                        <p>Delicioso pastel de chocolate con cobertura cremosa y decoraciones elegantes.</p>
+                        <div class="precio">Q. 120.00</div>
+                    </div>
+                </div>
+
+                <div class="producto-card" onclick="mostrarDetalle('Pastel de Vainilla')">
+                    <div class="producto-image">🎂</div>
+                    <div class="producto-info">
+                        <h3>Pastel de Vainilla</h3>
+                        <p>Suave y esponjoso pastel de vainilla con betún de mantequilla y frutas frescas.</p>
+                        <div class="precio">Q. 100.00</div>
+                    </div>
+                </div>
+
+                <div class="producto-card" onclick="mostrarDetalle('Pastel de Fresa')">
+                    <div class="producto-image">🍓</div>
+                    <div class="producto-info">
+                        <h3>Pastel de Fresa</h3>
+                        <p>Refrescante pastel con crema de fresa natural y decoraciones coloridas.</p>
+                        <div class="precio">Q. 110.00</div>
+                    </div>
+                </div>
+
+                <div class="producto-card" onclick="mostrarDetalle('Pastel Red Velvet')">
+                    <div class="producto-image">❤️</div>
+                    <div class="producto-info">
+                        <h3>Pastel Red Velvet</h3>
+                        <p>Clásico pastel red velvet con cream cheese frosting y un toque de cacao.</p>
+                        <div class="precio">Q. 140.00</div>
+                    </div>
+                </div>
+
+                <div class="producto-card" onclick="mostrarDetalle('Pastel de Tres Leches')">
+                    <div class="producto-image">🥛</div>
+                    <div class="producto-info">
+                        <h3>Pastel Tres Leches</h3>
+                        <p>Tradicional pastel tres leches con canela y un toque de ron (opcional).</p>
+                        <div class="precio">Q. 95.00</div>
+                    </div>
+                </div>
+
+                <div class="producto-card" onclick="mostrarDetalle('Pastel Personalizado')">
+                    <div class="producto-image">🎨</div>
+                    <div class="producto-info">
+                        <h3>Pastel Personalizado</h3>
+                        <p>Crea tu pastel ideal con los sabores y decoraciones que más te gusten.</p>
+                        <div class="precio">Desde Q. 300.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section class="about" id="sobre-nosotros">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <p>
+                En SuperCakes somos una pastelería artesanal comprometida con la calidad y el sabor excepcional. 
+                Utilizamos ingredientes frescos y de la mejor calidad para crear pasteles únicos que endulzan tus momentos más especiales. 
+                Con más de 10 años de experiencia, cada creación está hecha con amor y dedicación para superar tus expectativas.
+            </p>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📍 Guatemala City, Guatemala</p>
+                <p>📞 +502 1234-5678</p>
+                <p>✉️ info@SuperCakes.com</p>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <ul>
+                    <li>Lunes - Viernes: 8:00 AM - 7:00 PM</li>
+                    <li>Sábados: 9:00 AM - 6:00 PM</li>
+                    <li>Domingos: 10:00 AM - 4:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Pasteles Personalizados</a></li>
+                    <li><a href="#">Eventos Especiales</a></li>
+                    <li><a href="#">Entrega a Domicilio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; SuperCakes 2025 . Todos los derechos reservados. | Proyecto Desarrollo Web</p>
+            <p>Diseñado por Douglas Ortega</p>
+            <p> 17-5825 </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

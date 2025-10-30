@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - SuperCakes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">SuperCakes</a>
+            <nav>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="shop.html">Productos</a></li>
+                    <li><a href="index.html#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Banner -->
+        <section class="shop-banner">
+            <div class="shop-banner-content">
+                <h1>Contáctanos</h1>
+                <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Inicio</a> / <span>Contacto</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="contact-section">
+            <div class="contact-container">
+                
+                <!-- Información de Contacto -->
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    <p class="contact-intro">¿Interesado en un pastel personalizado? Cuéntanos tu idea y la haremos realidad.</p>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon"></div>
+                            <h3>Ubicación</h3>
+                            <p>Guatemala City<br>Guatemala</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon"></div>
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+50212345678">+502 1234-5678</a></p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon"></div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@supercakes.com">angela.sapon@gmail.com</a></p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon"></div>
+                            <h3>Horario</h3>
+                            <p>Lun - Vie: 8:00 AM - 7:00 PM<br>
+                            Sáb: 9:00 AM - 6:00 PM<br>
+                            Dom: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="contact-social">
+                        <h3>Síguenos en redes sociales</h3>
+                        <div class="social-links">
+                            
+                            <a href="https://www.instagram.com/supercakesgt?igsh=MWZpc3kwOHBibG1sag%3D%3D&utm_source=qr" target="_blank" title="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="contact-form-container">
+                    <h2>Solicita Información</h2>
+                    <p class="form-subtitle">Completa el formulario y te responderemos a la brevedad</p>
+
+                    <form id="contactForm" onsubmit="enviarContacto(event)">
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="1234-5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tipoConsulta">Tipo de consulta *</label>
+                            <select id="tipoConsulta" name="tipoConsulta" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="pastel-personalizado">Pastel Personalizado</option>
+                                <option value="cotizacion">Cotización</option>
+                                <option value="evento-especial">Evento Especial</option>
+                                <option value="informacion-general">Información General</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Cuéntanos sobre tu pastel ideal, fecha del evento, número de personas, etc."></textarea>
+                        </div>
+
+                        <div class="form-group-checkbox">
+                            <input type="checkbox" id="aceptaTerminos" name="aceptaTerminos" required>
+                            <label for="aceptaTerminos">Acepto la <a href="#">política de privacidad</a> y el uso de mis datos *</label>
+                        </div>
+
+                        <button type="submit" class="btn-enviar-contacto">
+                             Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="footer-contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Guatemala City, Guatemala</p>
+                <p>+502 1234-5678</p>
+                <p>angela.sapon@gmail.com</p>
+                <div class="social-links">
+                    
+                    <a href="https://www.instagram.com/supercakesgt?igsh=MWZpc3kwOHBibG1sag%3D%3D&utm_source=qr" target="_blank" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <ul>
+                    <li>Lunes - Viernes: 8:00 AM - 7:00 PM</li>
+                    <li>Sábados: 9:00 AM - 6:00 PM</li>
+                    <li>Domingos: 10:00 AM - 4:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Pasteles Personalizados</a></li>
+                    <li><a href="#">Eventos Especiales</a></li>
+                    <li><a href="#">Entrega a Domicilio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="shop.html">Productos</a></li>
+                    <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; SuperCakes 2025. Todos los derechos reservados. | Proyecto Desarrollo Web</p>
+            <p>Diseñado por Douglas Ortega</p>
+            <p>17-5825</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/contacto.js"></script>
+</body>
+</html>

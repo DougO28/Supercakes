@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperCakes - Pasteles Artesanales</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">SuperCakes</a>
+            <nav>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="shop.html">Productos</a></li>
+                    <li><a href="#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Sección Hero -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h1>Pasteles Super Cakes</h1>
+                <p>Endulza tus momentos especiales con nuestras creaciones únicas</p>
+                <a href="#productos" class="cta-button">Ver Productos</a>
+            </div>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section class="productos" id="productos">
+            <h2 class="section-title">Nuestros Pasteles</h2>
+            <div class="productos-grid">
+                <!-- Pastel de Zanahoria -->
+                <div class="producto-card" onclick="mostrarDetalle('Pastel de Zanahoria')">
+                    <div class="producto-image">
+                        <img src="imagenes/Pastel_Zanahoria.png" alt="Pastel de Zanahoria">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Pastel de Zanahoria</h3>
+                        <p>Delicioso pastel de zanahoria con especias y nueces, cubierto con frosting de queso crema.</p>
+                        <div class="precio">Q. 125.00</div>
+                    </div>
+                </div>
+
+                <!-- Pastel de Banano -->
+                <div class="producto-card" onclick="mostrarDetalle('Pastel de Banano')">
+                    <div class="producto-image">
+                        <img src="imagenes/Pan_Banano.png" alt="Pastel de Banano">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Pastel de Banano</h3>
+                        <p>Suave y esponjoso pastel de banano con toques de canela y cobertura de caramelo.</p>
+                        <div class="precio">Q. 125.00</div>
+                    </div>
+                </div>
+
+                <!-- Pasteles Personalizados (Carrusel) -->
+                <div class="producto-card">
+                    <div class="carousel-container">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide">
+                                <img src="imagenes/Pirata.jpg" alt="Pastel Pirata Personalizado">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="imagenes/Dinosaurio.jpg" alt="Pastel de Dinosaurio Personalizado">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="imagenes/Gato.jpg" alt="Pastel Garfield Personalizado">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="imagenes/Dentista.jpg" alt="Pastel de Dentista Personalizado">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="imagenes/JorgeElMono.jpg" alt="Pastel de JorgeElMono Personalizado">
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn" onclick="prevSlide()">‹</button>
+                            <button class="carousel-btn" onclick="nextSlide()">›</button>
+                        </div>
+                        <div class="carousel-indicators" id="indicators"></div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Pasteles Personalizados</h3>
+                        <p>Crea tu pastel ideal con los sabores y decoraciones que más te gusten.</p>
+                        <div class="precio">Desde Q. 350.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section class="about" id="sobre-nosotros">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <p>
+                En SuperCakes somos una pastelería artesanal comprometida con la calidad y el sabor excepcional. 
+                Utilizamos ingredientes frescos y de la mejor calidad para crear pasteles únicos que endulzan tus momentos más especiales. 
+                Con más de 10 años de experiencia, cada creación está hecha con amor y dedicación para superar tus expectativas.
+            </p>
+        </section>
+
+        <!-- Sección de Pedidos / Catálogo -->
+        <section class="catalogo-pedidos" id="pedidos">
+            <h2 class="section-title">Catálogo de Productos</h2>
+            
+            <!-- Barra de búsqueda y filtros -->
+            <div class="catalogo-header">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="filtrarProductos()">
+                    <button class="btn-search">🔍</button>
+                </div>
+                
+                <div class="filtros">
+                    <select id="categoriaFilter" onchange="filtrarProductos()">
+                        <option value="todos">Todas las categorías</option>
+                        <option value="pasteles">Pasteles</option>
+                        <option value="cupcakes">Cupcakes</option>
+                        <option value="personalizados">Personalizados</option>
+                        <option value="bebidas">Bebidas</option>
+                    </select>
+                    
+                    <select id="precioFilter" onchange="filtrarProductos()">
+                        <option value="todos">Todos los precios</option>
+                        <option value="0-100">Q0 - Q100</option>
+                        <option value="100-200">Q100 - Q200</option>
+                        <option value="200-500">Q200 - Q500</option>
+                        <option value="500+">Q500+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid de productos estilo e-commerce -->
+            <div class="catalogo-grid" id="catalogoGrid">
+                <!-- Los productos se cargarán dinámicamente desde JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Guatemala City, Guatemala</p>
+                <p>+502 1234-5678</p>
+                <p>angela.sapon@gmail.com</p>
+                <div class="social-links">
+                    
+                    <a href="https://www.instagram.com/supercakesgt?igsh=MWZpc3kwOHBibG1sag%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <ul>
+                    <li>Lunes - Viernes: 8:00 AM - 7:00 PM</li>
+                    <li>Sábados: 9:00 AM - 6:00 PM</li>
+                    <li>Domingos: 10:00 AM - 4:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Pasteles Personalizados</a></li>
+                    <li><a href="#">Eventos Especiales</a></li>
+                    <li><a href="#">Entrega a Domicilio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; SuperCakes 2025. Todos los derechos reservados. | Proyecto Desarrollo Web</p>
+            <p>Diseñado por Douglas Ortega</p>
+            <p>17-5825</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALLES DEL PRODUCTO -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Detalles del Producto</h2>
+                <button class="close-modal" onclick="cerrarModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-product-grid">
+                    <div class="modal-image-container">
+                        <img id="modalImage" src="" alt="">
+                    </div>
+                    <div class="modal-info">
+                        <h3>Descripción</h3>
+                        <p class="modal-description" id="modalDescription"></p>
+                        <div class="modal-price" id="modalPrice"></div>
+                        <div class="modal-features">
+                            <h4>Características:</h4>
+                            <ul id="modalFeatures"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+    <button class="btn-order" onclick="realizarPedido()">
+        <img src="imagenes/carritocompras.png" alt="Carrito" class="icon-carrito"> Realizar Pedido
+    </button>
+    <button class="btn-contact" onclick="contactarWhatsApp()">Contactar por WhatsApp</button>
+</div>
+
+    <!-- Scripts externos -->
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>

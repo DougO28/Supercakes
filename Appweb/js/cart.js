@@ -511,3 +511,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Actualizar contador del carrito en todas las páginas
     actualizarContadorCarrito();
 });
+
+
+

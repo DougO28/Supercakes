@@ -1,6 +1,6 @@
-// ========================================
+
 // NAVEGACIÓN Y MENÚ MÓVIL
-// ========================================
+
 
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ========================================
+
 // EFECTOS DE SCROLL EN HEADER
-// ========================================
+
 
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
@@ -32,9 +32,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ========================================
+
 // SMOOTH SCROLL PARA ANCLAS
-// ========================================
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

@@ -1,6 +1,6 @@
-// ========================================
+
 // FORMULARIO DE CONTACTO
-// ========================================
+
 
 function enviarContacto(event) {
     event.preventDefault();
@@ -23,13 +23,13 @@ function enviarContacto(event) {
     // Mostrar loading
     mostrarLoading('Enviando tu mensaje...');
     
-    // ⚠️ REEMPLAZA ESTOS DOS IDs CON LOS TUYOS:
-    // 'TU_SERVICE_ID' → El mismo Service ID que usas en cart.js (ejemplo: service_abc1234)
-    // 'TU_TEMPLATE_CONTACTO_ID' → El Template ID del nuevo template de contacto (ejemplo: template_contacto_xyz789)
+    
+    
+    // Credenciales de EmailJS
     
     emailjs.send('service_l05fpxm', 'template_4wmaazc', templateParams)
         .then(function(response) {
-            console.log('✅ Mensaje enviado!', response);
+            console.log('Mensaje enviado!', response);
             ocultarLoading();
             mostrarExito();
             
@@ -37,15 +37,15 @@ function enviarContacto(event) {
             document.getElementById('contactForm').reset();
             
         }, function(error) {
-            console.error('❌ Error:', error);
+            console.error('Error:', error);
             ocultarLoading();
-            alert('⚠️ Hubo un error al enviar tu mensaje. Por favor, intenta contactarnos por teléfono o email directamente.');
+            alert('Hubo un error al enviar tu mensaje. Por favor, intenta contactarnos por teléfono o email directamente.');
         });
 }
 
-// ========================================
+
 // FUNCIONES DE UI
-// ========================================
+
 
 function mostrarLoading(mensaje) {
     const loading = document.createElement('div');
@@ -87,14 +87,14 @@ function cerrarMensajeExito() {
     }
 }
 
-// ========================================
+
 // INICIALIZACIÓN
-// ========================================
+
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('✓ Contacto.js cargado');
     
-    // ⚠️ REEMPLAZA 'TU_PUBLIC_KEY' CON TU PUBLIC KEY REAL
-    // Es el mismo que usas en cart.js (ejemplo: user_A1b2C3d4E5f6G7h8)
+    
+    // Es el mismo de en cart.js 
     emailjs.init("uHjvL3tGj5RROJ9qO");
 });

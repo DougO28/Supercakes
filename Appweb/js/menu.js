@@ -64,9 +64,9 @@ function realizarPedido(producto, precio) {
 }
 
 function contactarWhatsApp(producto, precio) {
-    // ⚠️ IMPORTANTE: Reemplaza con tu número real de WhatsApp
-    // Formato: código de país + número (sin espacios, guiones ni +)
-    const numeroWhatsApp = '50212345678'; // Ejemplo: 502 1234-5678
+    
+    // 
+    const numeroWhatsApp = '50212345678'; 
     
     const mensaje = `Hola! Estoy interesado en el ${producto} (${precio}). ¿Podrían darme más información?`;
     const mensajeCodificado = encodeURIComponent(mensaje);

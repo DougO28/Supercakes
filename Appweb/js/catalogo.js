@@ -1,6 +1,6 @@
-// ========================================
+
 // BASE DE DATOS DE PRODUCTOS
-// ========================================
+
 
 const productos = [
     {
@@ -141,9 +141,9 @@ const productos = [
     }
 ];
 
-// ========================================
+
 // CARGAR PRODUCTOS AL CATÁLOGO
-// ========================================
+
 
 function cargarCatalogo(productosFiltrados = productos) {
     const catalogoGrid = document.getElementById('catalogoGrid');
@@ -201,9 +201,9 @@ function cargarCatalogo(productosFiltrados = productos) {
     console.log(`✓ ${productosFiltrados.length} productos cargados en el catálogo`);
 }
 
-// ========================================
+
 // FILTRADO Y ORDENAMIENTO
-// ========================================
+
 
 function filtrarProductos() {
     const searchInput = document.getElementById('searchInput');
@@ -310,9 +310,9 @@ function scrollToTop() {
     });
 }
 
-// ========================================
+
 // MODAL DE PRODUCTO
-// ========================================
+
 
 function abrirModalProducto(producto) {
     let modal = document.getElementById('productModal');
@@ -466,9 +466,9 @@ function contactarWhatsApp(producto, precio) {
     window.open(urlWhatsApp, '_blank');
 }
 
-// ========================================
+
 // UTILIDADES
-// ========================================
+
 
 function obtenerNombreCategoria(categoria) {
     const categorias = {
@@ -496,9 +496,9 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// ========================================
+
 // INICIALIZACIÓN
-// ========================================
+
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('✓ Catalogo.js iniciando...');

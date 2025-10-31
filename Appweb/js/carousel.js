@@ -1,6 +1,6 @@
-// ========================================
+
 // CARRUSEL PRINCIPAL (Sección Productos)
-// ========================================
+
 
 let currentSlide = 0;
 let carouselInterval;
@@ -88,9 +88,9 @@ function goToSlide(index) {
     updateCarousel();
 }
 
-// ========================================
-// CARRUSEL DE DETALLE (Para pasteles personalizados)
-// ========================================
+
+// CARRUSEL DE DETALLE Para personalizados
+
 
 let currentSlideDetalle = 0;
 
